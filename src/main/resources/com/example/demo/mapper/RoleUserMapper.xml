@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.RoleUserMapper">
+
+    <resultMap id="RoleUserResultMap" type="com.example.demo.entities.RoleUser">
+        <result property="role_id" column="ROLE_ID"></result>
+        <result property="role_name" column="ROLE_NAME"></result>
+        <result property="description" column="DESCRIPTION"></result>
+    </resultMap>
+
+    <select id="getAllRoleUser" resultMap="RoleUserResultMap">
+        SELECT ROLE_ID
+             ,ROLE_NAME
+             ,DESCRIPTION
+        FROM system.F8_ROLE
+    </select>
+
+</mapper>
